@@ -1,0 +1,62 @@
+@import url('../../../../static/css/var.less');
+.matchPage{
+	padding-top: 4rem;
+	padding-bottom: 2.4rem;
+	position: relative;
+	z-index: 0;
+	.tagHeader{
+		top: 2rem;
+	}
+	.matchList{
+		width: 100%;
+		display: flex;
+		flex-direction:column;
+		background-color: white;
+		.matchItem{
+			width: 100%;
+			height: 4rem;
+			border-bottom: 1px solid @borderColor;
+			display: flex;
+			flex-wrap:nowrap;
+			align-items:center;
+			justify-content:space-around;
+			.teamA,.teamB{
+				width: 4rem;
+				height: 2.8rem;
+				display: flex;
+				flex-direction:column;
+				justify-content:space-between;
+				align-items:center;
+				img{
+					width: 1.8rem;
+					height: 1.8rem;
+				}
+				.teamName{
+					font-size: 0.55rem;
+					color:@fontDeepColor;
+					text-align: center;
+				}
+			}
+			.matchContent{
+				width: 5rem;
+				height: 3rem;
+				display: flex;
+				flex-direction:column;
+				justify-content:space-between;
+				align-items:center;
+				.matchType,.matchState{
+					font-size: 0.5rem;
+					color:@fontDefaultColor;
+				}
+				.matchResult{
+					width: 100%;
+					text-align: center;
+					font-size: 0.95rem;
+					letter-spacing: 0.2rem;
+					text-indent: 0.2rem;
+					color:@fontDeepColor;
+				}
+			}
+		}
+	}
+}

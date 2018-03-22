@@ -1,0 +1,31 @@
+@import url('../../static/css/var.less');
+.LineupMember{
+	position: absolute;
+	width: 4rem;
+	height: 2rem;
+	font-size: 0.5rem;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	.num{
+		display: block;
+		color:white;
+		width: 1.3rem;
+		height: 1.3rem;
+		line-height: 1.2rem;
+		border:1px solid white;
+		border-radius: 50%;
+		text-align: center;
+	}
+	.text{
+		color:white;
+		width:100%;
+		display: inline-block;
+		margin-top: 0.1rem;
+		overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    text-align: center;
+	}
+}

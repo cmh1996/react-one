@@ -1,0 +1,88 @@
+@import url('../../../../static/css/var.less');
+.musicSearchPage{
+	width: 100%;
+	padding: 0.4rem;
+	.SmallTitleBar{
+		background-color: transparent;
+		span{
+			color:@fontShallowColor;
+		}
+	}
+	.searchBox{
+		width: 100%;
+		display: flex;
+		input{
+			flex:1;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color:white;
+			font-size: 0.7rem;
+			padding-left: 0.3rem;
+			padding: 0.3rem;
+			border-bottom: 0.01rem solid @borderColor;
+			margin-right: 0.3rem;
+			&::-webkit-input-placeholder{
+				color:@fontShallowColor;
+			}
+		}
+		i{
+			width: 1rem;
+			text-align: center;
+			font-size: 0.9rem;
+		}
+	}
+	.hotSearch{
+		margin-top: 1rem;
+		.hotKeys{
+			margin-top: 0.4rem;
+			display: flex;
+			flex-wrap:wrap;
+			li{
+				padding: 0.4rem;
+				border: 0.01rem solid white;
+				border-radius: 0.5rem;
+				margin-right: 0.4rem;
+				font-size: 0.6rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+	.searchHistory{
+		margin-top: 1rem;
+		.historyItems{
+			background-color: rgba(255, 255, 255, 0.05);
+			margin-top: 0.6rem;
+			padding: 0 0.3rem;
+			li{
+				width: 100%;
+				background-color: transparent;
+				height: 2.4rem;
+				display: flex;
+				align-items:center;
+				border-bottom:0.01rem solid rgba(255,255,255,0.1);
+				span{
+					flex:1;
+					height: 100%;
+					line-height: 2.4rem;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+					font-size: 0.7rem;
+				}
+				i{
+					width: 1rem;
+					text-align: center;
+					font-size: 0.7rem;
+				}
+			}
+			.clearLi{
+				height: 1.7rem;
+				span{
+					text-align: center;
+					line-height: 1.7rem;
+				}
+			}
+		}
+	}
+}

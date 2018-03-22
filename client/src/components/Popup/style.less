@@ -1,0 +1,67 @@
+@import url('../../static/css/var.less');
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: @popupBgColor;
+	color:white;
+	overflow: hidden;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	transition: all 0.3s;
+	.content{
+		width:100%;
+		padding: 0.5rem;
+		display: flex;
+		flex-wrap:wrap;
+		span{
+			width: 3.5rem;
+			height: 1.6rem;
+			border:1px solid @borderColor;
+			font-size: 0.7rem;
+			margin-right: 0.3rem;
+			text-align: center;
+			line-height: 1.6rem;
+			margin-bottom: 0.5rem;
+			overflow: hidden;
+			border-radius: 0.2rem;
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+		}	
+		.selected{
+			color:@mainColor;
+			border-color:@mainColor;
+		}
+	}
+	.btn{
+		span{
+			width: 2.6rem;
+			height: 2.6rem;
+			display: inline-block;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 2.6rem;
+			margin:0.8rem;
+			i{
+				font-size: 2rem;
+			}
+		}
+		.cancelBtn{
+			background-color: @banColor;
+		}
+		.confirmBtn{
+			background-color: @confirmColor;
+		}
+	}
+	
+}
+.show{
+	display: flex;
+}
+.hide{
+	display: none;
+}

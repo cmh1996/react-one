@@ -1,0 +1,78 @@
+@import url('../../../../../static/css/var.less');
+.dynamicDetail{
+	.SubHeader{
+		position: fixed;
+		top: 0;
+		left:0;
+		background: #174c60;
+		border: none;
+		.title,.left,.right{
+			color: white;
+			text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+		}
+	}
+	.bigListItem{
+		margin-top: 2rem;
+		.bigListItemMainInfo{
+			a{
+				color:@thirdColor;
+			}
+		}
+		.url-icon{
+			img{
+				width: 0.8rem;
+				height: 0.8rem;
+				position: relative;
+				top: 0.15rem;
+			}
+		}
+	}
+	.dynamicDetailBar{
+		margin-top: 0.5rem;
+		width: 100%;
+		height: 2rem;
+		display: flex;
+		position: sticky;
+		top: 2rem;
+		justify-content:space-around;
+		align-items:center;
+		font-size: 0.7rem;
+		color: @fontDefaultColor;
+		background-color: white;
+		border-bottom:1px solid @borderColor;
+		z-index: 1000;
+		span{
+			width: 30%;
+			height: 100%;
+			text-align: center;
+			line-height: 2rem;
+		}
+		.selected{
+			color:@thirdColor;
+		}
+	}
+	.dynamicDetailInteraction{
+		.commentList{
+			padding-bottom: 2rem;
+			.bigListItem{
+				margin-top: 0;
+				padding-bottom: 0;
+				.bigListItemtitle{
+					font-size: 0.6rem;
+					font-weight: normal;
+				}
+			}
+		}
+		.likeList,.commentList{
+			.nolike{
+				width: 100%;
+				height: 3rem;
+				margin-top: 1rem;
+				text-align: center;
+				line-height: 3rem;
+				font-size: 0.7rem;
+				color:@fontDefaultColor;
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import url('../../../../../../static/css/var.less');
+.MatchLineup{
+	width: 100%;
+	display:flex;
+	flex-direction:column;
+	.SmallTitleBar{
+		background-color: #e8e8e8;
+	}
+	.subLineup{
+		background-color: white;
+		padding-bottom: 1rem;
+	}
+	.subNames,.mainNames{
+		width: 100%;
+		display: flex;
+		flex-direction:column;
+		background-color: white;
+		li{
+			width: 100%;
+			height: 2rem;
+			border-bottom: 1px solid @borderColor;
+			.subMember{
+				width: 49%;
+				height: 100%;
+				padding: 0.2rem 0.4rem;
+				line-height: 1.6rem;
+				font-size: 0.6rem;
+				display: inline-block;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+				span{
+					width: 1.2rem;
+					height: 1.2rem;
+					border-radius: 50%;
+					display: inline-block;
+					background-color: #14446a;
+					color:white;
+					text-align: center;
+					line-height: 1.2rem;
+					margin-right: 0.5rem;
+				}
+				&:first-child{
+					span{
+						background-color: #f99c35;
+					}
+				}
+			}
+			&:first-child{
+				span{
+					position: relative;
+					top: 0.25rem;
+				}
+			}
+			&:last-child{
+				border: none;
+			}
+		}
+	}
+	.mainLineup{
+		position: relative;
+		.mainMembers{
+			position: absolute;
+		}
+	}
+}

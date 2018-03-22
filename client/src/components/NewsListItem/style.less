@@ -1,0 +1,54 @@
+@import url('../../static/css/var.less');
+.newsListItem{
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid @borderColor;
+	padding: 0.6rem;
+	font-size: 0.75rem;
+	display: flex;
+	align-items:center;
+	.newsText{
+		flex:1;
+		margin-right: 0.6rem;
+		display: flex;
+		flex-direction:column;
+		justify-content:space-between;
+		.newsTitle{
+			width: 100%;
+		  	word-break:break-all;
+		  	display:-webkit-box;
+		  	-webkit-line-clamp:3;
+		  	-webkit-box-orient:vertical;
+		  	overflow:hidden;
+		  	line-height: 0.9rem;
+		}
+		.newsDesc{
+			width: 100%;
+		  	word-break:break-all;
+		  	display:-webkit-box;
+		  	-webkit-line-clamp:3;
+		  	-webkit-box-orient:vertical;
+		  	overflow:hidden;
+		  	line-height: 0.8rem;
+		  	font-size: 0.5rem;
+		  	color:@fontDefaultColor;
+		  	margin-top: 0.3rem;
+		}
+		.newsInfo{
+			margin-top: 0.8rem;
+			font-size: 0.5rem;
+			span{
+				margin-right: 0.6rem;
+				color:@fontDefaultColor;
+			}
+		}
+	}
+	.newsImg{
+		width: 4.3rem;
+		height: 3.6rem;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

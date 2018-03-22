@@ -1,0 +1,143 @@
+@import url('../../../static/css/var.less');
+.weatherPage{
+	.SubHeader{
+		position: fixed;
+		top: 0;
+		left: 0;
+		border: none;
+		height: 1.8rem;
+	}
+	.nightBg{
+		background: linear-gradient(@nightWeatherBg0, @nightWeatherBg1);
+		header{
+			border-bottom: 1px solid @nightWeatherHeaderBorder;
+		}
+	}
+	.dayBg{
+		background: linear-gradient(@dayWeatherBg0, @dayWeatherBg1);
+		header{
+			border-bottom: 1px solid @dayWeatherHeaderBorder;
+		}
+	}
+	.weatherBox{
+		color: @fontWhiteColor;
+		display: flex;
+		flex-direction:column;
+		justify-content:flex-start;
+		align-items:flex-start;
+		padding-top: 1rem;
+		header{
+			width:100%;
+			height: 4.2rem;
+			display: flex;
+			justify-content:space-between;
+			padding: 0.8rem;
+			.air{
+				width: 5rem;
+				height: 2.6rem;
+				line-height: 1.2rem;
+				text-align: center;
+				border-radius: 0.2rem;
+				background-color: rgba(255, 255, 255, 0.15);
+				font-size: 0.6rem;
+				.air-btn{
+					display: inline-block;
+					width: 88%;
+					height: 40%;
+					background-color:#7fbf00;
+					border-radius: 0.2rem;
+					border: none;
+					overflow: hidden;
+				}
+			}
+			.time{
+				display: flex;
+				flex-direction:column;
+				height: 2.6rem;
+				justify-content:space-around;
+				font-size: 0.6rem;
+				.timeTop>span:first-child{
+					display: inline-block;
+					margin-right: 0.7rem;
+				}
+				.timeBottom{
+					text-align: right;
+				}
+			}
+		}
+		.curTemp{
+			margin-top:1rem;
+			margin-left: 1rem;
+			p{
+				font-size: 3.8rem;
+				margin-right: 0.6rem;
+				display: inline-block;
+			}
+			span{
+				font-size: 1.5rem;
+			}
+		}
+		.todayTemp{
+			margin-top:1rem;
+			margin-bottom:1.5rem;
+			margin-left: 1rem;
+			font-size: 0.7rem;
+		}
+		.everyDay{
+			width: 100%;
+			height: 14rem;
+			background-color: rgba(255, 255, 255, 0.1);
+			display: flex;
+			flex-wrap:nowrap;
+			align-items:center;
+			padding-top: 0.6rem;
+			padding-bottom: 0.6rem;
+			font-size: 0.6rem;
+			position: relative;
+			.day{
+				flex:1;
+				height: 100%;
+				border-right: 1px solid rgba(255, 255, 255, 0.5);
+				display: flex;
+				flex-direction:column;
+				align-items:center;
+				.perDay{
+					margin-top: 0.4rem;
+				}
+				i{
+					margin-top: 0.4rem;
+					font-size: 1rem;
+					margin-bottom: 0.6rem;
+				}
+				.low{
+					margin-top: 5rem;
+				}
+				.wind{
+					text-align: center;
+					line-height: 1.2em;
+					margin-top: 0.6rem;
+					margin-left: 0.15rem;
+					margin-right: 0.15rem;
+				}
+				.windl{
+					position: absolute;
+					bottom: 1rem;
+				}
+			}
+			.day:nth-child(2){
+				background: linear-gradient(
+					rgba(255, 255, 255, 0), 
+					rgba(255, 255, 255, 0.2),
+					rgba(255, 255, 255, 0),
+					);
+			}
+		}
+		#weatherLine{
+			width: 100%;
+			height: 4rem;
+			position: absolute;
+			top: 17.5rem;
+			left: 0;
+		}
+	}
+}

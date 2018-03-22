@@ -1,0 +1,110 @@
+@import url('../../../../static/css/var.less');
+.soccerNewsPage{
+	padding-top: 4rem;
+	padding-bottom: 2.4rem;
+	position: relative;
+	z-index: 0;
+	.tagHeader{
+		top: 2rem;
+	}
+	.banner{
+		position: relative;
+		img{
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		p{
+			z-index: 1;
+			position: absolute;
+			color:white;
+			font-size: 0.7rem;
+			bottom: 1rem;
+			left: 0.4rem;
+			white-space: nowrap;  
+		    width: 85%;   
+		    overflow: hidden;   
+		    text-overflow:ellipsis; 
+		}
+	}
+	.hotMatchBox{
+		width: 100%;
+		height: 4rem;
+		border-bottom: 1px solid @borderColor;
+		display: flex;
+		flex-wrap:nowrap;
+		background-color: white;
+		.hotMatch{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			padding: 0.2rem 0.4rem;
+			flex-direction:column;
+			font-size: 0.4rem;
+			&:first-child{
+				border-right:1px solid @borderColor;
+			}
+			.hotMatchHeader{
+				width: 100%;
+				height: 1rem;
+				display: flex;
+				justify-content:space-between;
+				align-items:center;
+				.matchType{
+					flex:1;
+					overflow: hidden;
+				}
+				.matchLive{
+					width: 1.5rem;
+					height: 0.7rem;
+					line-height: 0.6rem;
+					text-align: center;
+					display: inline-block;
+					border: 1px solid @thirdColor;
+					color:@thirdColor;
+				}
+			}
+			.hotMatchBody{
+				width: 100%;
+				height: 2.6rem;
+				display: flex;
+				align-items:center;
+				justify-content:space-between;
+				.matchTeams{
+					flex:1;
+					overflow: hidden;
+					display: flex;
+					flex-direction:column;
+					height: 100%;
+					justify-content:space-around;
+					.matchTeam{
+						display: flex;
+						align-items:center;
+						img{
+							width: 1rem;
+							height: 1rem;
+							margin-right: 0.3rem;
+						}
+					}
+				}
+				.matchScore{
+					overflow: hidden;
+					display: flex;
+					flex-direction:column;
+					height: 100%;
+					justify-content:space-around;
+				}
+			}
+		}
+	}
+	.scrollListBox{
+		.scrollList{
+			.newsListItem{
+				border-bottom: 1px solid @borderColor;
+			}	
+		}
+	}
+}

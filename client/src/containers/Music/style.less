@@ -1,0 +1,348 @@
+@import url('../../static/css/var.less');
+.musicPage{
+	.SubHeader{
+		position: fixed;
+		top: 0;
+		left:0;
+		background: @seventhColor;
+		border: none;
+		.title,.left,.right{
+			color: white;
+			text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+		}
+	}
+	.tagHeader{
+		.center{
+			span{
+				color:@fontShallowColor;
+			}
+			.selected{
+				color:@mainColor;
+				border-bottom:0.01rem solid @mainColor;
+			}
+		}
+	}
+	.listItem{
+		background-color: transparent;
+		border-bottom:0.01rem solid rgba(255, 255, 255, 0.1);
+		.value{
+			color:white;
+		}
+		.listItemLeft{
+			img{
+				width: 2rem;
+				height: 2rem;
+				margin-right: 0.4rem;
+			}
+			.listItemContent{
+				.title{
+					color:white;
+				}
+				.info{
+					color:@fontShallowColor;
+				}
+			}
+		}
+	}
+	.detailHeader{
+		width: 100%;
+		height: 12rem;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0% 30%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		text-align: center;
+		.headerBox{
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100%;
+			height: 2rem;
+			z-index: 100;
+		}
+		.contentBox{
+			width: 100%;
+			height: 10rem;
+			top: 2rem;
+			left: 0;
+			position: absolute;
+			overflow:hidden;
+			span{
+				width: 100%;
+				font-size: 1.5rem;
+				display: block;
+				bottom: 2.3rem;
+				position: absolute;
+				text-align: center;
+			}
+			.tips1{
+				text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+			}
+			.tips2{
+				font-size: 0.6rem;
+				color:@fontShallowColor;
+				bottom: 1rem;
+				margin-top: 0.6rem;
+			}
+		}
+		.infoBox{
+			width: 100%;
+			height: 10rem;
+			top: 2rem;
+			left: 0;
+			position: absolute;
+			overflow:hidden;
+			display: flex;
+			padding: 0 0.8rem;
+			align-items:center;
+			.headerImg{
+				flex:3;
+				height: 6rem;
+				position: relative;
+				margin-right: 0.3rem;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				span{
+					font-size: 0.5rem;
+					position: absolute;
+					left: 0.1rem;
+					bottom: 0.1rem;
+				}
+			}
+			.headerInfo{
+				flex:5;
+				display: flex;
+				flex-direction:column;
+				height: 6rem;
+				justify-content:space-between;
+				span{
+					font-size: 0.8rem;
+					text-align: left;
+					text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+					word-break:break-all;
+				}
+				div{
+					text-align: left;
+					font-size: 0.6rem;
+					height: 1.5rem;
+					text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+					img{
+						width: 1.5rem;
+						height: 1.5rem;
+						border-radius: 50%;
+						display: inline-block;
+						margin-right: 0.4rem;
+						position: relative;
+						top: 0.4rem;
+					}
+				}
+				.collectBtn{
+					height: 1rem;
+					margin-top: 0.7rem;
+					span{
+						font-size: 0.6rem;
+					}
+				}
+			}
+		}
+	}
+	.songContent{
+		.playAll{
+			width: 100%;
+			height: 2rem;
+			font-size: 0.7rem;
+			text-align: center;
+			line-height: 2rem;
+			border-bottom: 0.01rem solid rgba(255, 255, 255, 0.1);
+			i{
+				margin-right: 0.4rem;
+			}
+		}
+		.listItem{
+			background-color: transparent;
+			border-bottom: 0.01rem solid rgba(255, 255, 255, 0.1);
+			align-items:center;
+			height: 3rem;
+			.listItemLeft{
+				width: 13rem;
+				.listItemContent{
+					width: 100%;
+					justify-content:center;
+					font-size: 0.7rem;
+					.title{
+						width: 98%;
+						overflow: hidden;
+						text-overflow:ellipsis;
+						white-space: nowrap;
+					}
+					.quality,.hasmv{
+						width: 1.2rem;
+						height: 0.7rem;
+						display: inline-block;
+						margin-left: 0.2rem;
+						font-size:0.5rem;
+						text-align: center;
+						border-radius: 0.2rem;
+						padding: 0 0.1rem;
+						padding-top: 0.05rem;
+					}
+					.quality{
+						border:0.01rem solid @secondColor;
+						color:@secondColor;
+					}
+					.hasmv{
+						border:0.01rem solid @mainColor;
+						color:@mainColor;
+					}
+					.info{
+						width: 100%;
+						max-width: 100%;
+						color:@fontShallowColor;
+						margin-top: 0.3rem;
+						font-size: 0.6rem;
+					}
+				}
+
+			}
+			.value{
+				i{
+					color:white;
+				}
+			}
+		}
+	}
+	.albumContent{
+		.listItem{ 
+			padding-left:0; 
+			min-height: 4rem;
+			.listItemLeft{
+				img{
+					border-radius: 0;
+					min-width: 4rem;
+					height: 100%;
+					margin-right: 0.3rem;
+				}
+			}
+			.listItemContent{
+				flex:1;
+				justify-content:center;
+				.title{
+					max-width: 10rem;
+					display: block;
+					overflow:hidden; 
+					text-overflow:ellipsis;
+					line-height: 0.8rem;
+					font-size: 0.6rem;
+				}
+				.info{
+					margin-top: 0.3rem;
+					font-size: 0.5rem;
+				}
+			}
+		}
+	}
+	.mvContent{
+		.listItem{
+			padding-left:0; 
+			min-height: 3.7rem;
+			.listItemLeft{
+				img{
+					border-radius: 0;
+					width: 6rem;
+					height: 100%;
+					margin-right: 0.3rem;
+					min-width: 6rem;
+				}
+			}
+			.listItemContent{
+				flex:1;
+				justify-content:center;
+				.title{
+					max-width: 9rem;
+					display: block;
+					overflow:hidden; 
+					text-overflow:ellipsis;
+					line-height: 0.8rem;
+					font-size: 0.6rem;
+				}
+				.info{
+					margin-top: 0.3rem;
+					font-size: 0.5rem;
+				}
+			}
+		}
+	}
+	.songlistContent{
+		.listItem{
+			min-height: 3rem;
+			.listItemContent{
+				flex:1;
+				justify-content:center;
+				.title{
+					width: 100%;
+					display: block;
+					overflow:hidden; 
+					text-overflow:ellipsis;
+					display:-webkit-box; 
+					-webkit-box-orient:vertical;
+					-webkit-line-clamp:2;
+					line-height: 0.8rem;
+					font-size: 0.7rem;
+				}
+				.info{
+					margin-top: 0.2rem;
+					font-size: 0.5rem;
+				}
+			}
+		}
+	}
+	.dataContent{
+		font-size: 0.7rem;
+		color:@fontShallowColor;
+		padding: 0.7rem;
+		line-height: 1.1rem;
+	}
+	.newsListItem{
+		background-color: transparent;
+		color:white;
+		border-bottom:0.01rem solid rgba(255,255,255,0.1);
+		.newsText{
+			.newsDesc,.newsInfo{
+				color:@fontShallowColor;
+				span{
+					color:@fontShallowColor;
+				}
+			}
+		}
+	}
+	.searchingList{
+		margin-top: 0.4rem;
+		font-size: 0.7rem;
+		.searchTitle{
+			color:@mainColor;
+			width: 100%;
+			height: 1.7rem;
+			line-height: 1.7rem;
+			overflow: hidden;
+		}
+		.searchResult{
+			width: 100%;
+			height: 1.8rem;
+			line-height: 1.8rem;
+			overflow: hidden;
+			border-bottom: 0.01rem solid rgba(255,255,255,0.1);
+			.icon{
+				width: 1rem;
+				text-align: center;
+				display: inline-block;
+			}
+			.text{
+				margin-left: 0.4rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+ @import url('../../../../../../static/css/var.less');
+.mvDetailPage{
+	width: 100%;
+	padding-top: 2rem;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	.videoArea{
+		position: relative;
+		width: 100%;
+		height: 10rem;
+		img{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.noVideo{
+			width: 12rem;
+			height: 2rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -1rem;
+			margin-left: -6rem;
+			line-height: 2rem;
+			border-radius: 0.3rem;
+			font-size: 0.8rem;
+			text-align: center;
+			color: white;
+			border: 0.1rem solid white;
+			display: block;
+			text-shadow:0.1rem 0.1rem 0.2rem @fontDeepColor;
+		}
+	}
+	.mvInfo{
+		margin-top: 1rem;
+		display: flex;
+		flex-direction:column;
+		width: 100%;
+		padding: 0 0.4rem;
+		.mvName{
+			font-size: 0.7rem;
+		}
+		.singerName{
+			margin-top: 0.5rem;
+			font-size: 0.6rem;
+			color:@fontShallowColor;
+		}
+		.bottomInfo{
+			span{
+				font-size: 0.6rem;
+				color:@fontShallowColor;
+				margin-right: 1rem;
+			}
+		}
+	}
+	.otherMV{
+		width: 100%;
+		padding: 0 0.4rem;
+		margin-top: 2rem;
+		.title{
+			text-align: center;
+			width: 100%;
+			font-size: 0.8rem;
+		}
+		.mvList{
+			margin-top: 1rem;
+			width: 100%;
+			.listItem{
+				width: 100%;
+				padding: 0;
+				.listItemLeft{
+					width: 95%;
+					.listItemImg{
+						width: 4rem;
+						height: 100%;
+						border-radius: 0;
+						margin: 0;
+					}
+					.listItemContent{
+						overflow: hidden;
+						width: 65%;
+						.title{
+							font-size: 0.6rem;
+							width: 100%;
+							overflow: hidden;
+							text-overflow:ellipsis;
+							white-space: nowrap;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}

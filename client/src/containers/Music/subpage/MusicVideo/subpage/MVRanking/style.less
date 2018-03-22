@@ -1,0 +1,59 @@
+.MVRankingPage{
+	.tagHeader{
+		position: fixed;
+		top: 2rem;
+		left: 0;
+	}
+	.mvList{
+		margin-top: 4rem;
+		.mv{
+			position: relative;
+			width: 100%;
+			height: 9rem;
+			margin-bottom: 0.1rem;
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+    			filter: brightness(.8);
+			}
+			.tips1{
+				position: absolute;
+				left: 0.3rem;
+				bottom: 1.4rem;
+				.rankNum{
+					font-size: 1rem;
+				}
+				.score{
+					display: inline-block;
+					background-color: #efedec;
+					color:black;
+					font-size: 0.5rem;
+					padding: 0.1rem;
+				}
+				.i{
+					display: inline-block;
+					background-color: rgba(0,0,0,0.5);
+					color:white;
+					font-size: 0.5rem;
+					padding: 0.1rem;
+				}
+			}
+			.tips2{
+				position: absolute;
+				left: 0.3rem;
+				bottom: 0.4rem;
+				font-size: 0.65rem;
+				width: 90%;
+				height: 1rem;
+				line-height: 1rem;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+}

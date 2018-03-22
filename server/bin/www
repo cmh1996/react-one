@@ -1,0 +1,137 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('demo:server');
+var http = require('http');
+const user = require('../controllers/user');
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+// app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app.callback());
+
+
+
+//私信
+var io = require('socket.io')(server);
+let userMap = {};
+io.on('connection', (socket)=>{
+  //登入
+  socket.on('join',(data)=>{
+    userMap[data.id] = socket.id;
+  })
+
+  //发信息
+  socket.on('msg',(data)=>{
+    //如果对方在线
+    if(userMap[data.to]){
+      io.to(userMap[data.to]).emit('msg',{
+        from:data.from,
+        to:data.to,
+        msg:data.msg
+      });
+    }
+    //发给自己
+    io.to(userMap[data.from]).emit('msg',{
+      from:data.from,
+      to:data.to,
+      msg:data.msg
+    });
+
+    //保存到数据库
+    user.addChatLog({
+      from_id:data.from,
+      to_id:data.to,
+      content:data.msg
+    })
+  });
+
+
+  socket.on('disconnect',()=>{
+    //移除
+    Object.keys(userMap).map((item,index)=>{
+      if(userMap[item]===socket.id){
+        delete userMap[item];
+      }
+    })
+  });
+});
+
+
+
+
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}

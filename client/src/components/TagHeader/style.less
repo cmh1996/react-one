@@ -1,0 +1,33 @@
+@import url('../../static/css/var.less');
+.tagHeader{
+	width: 100%;
+	height: 2rem;
+	position: fixed;
+	left:0;
+	top: 0;
+	z-index: 10;
+	.center{
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-wrap:nowrap;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		height: 100%;
+		span{
+			min-width: 12.5%;
+			font-size: 0.7rem;
+			height: 100%;
+			line-height: 2rem;
+			color: @fontDefaultColor;
+		}		
+		.selected{
+			color:@eighthColor;
+			border-bottom:0.06rem solid @eighthColor;
+		}
+	}
+	::-webkit-scrollbar
+	{
+		display: none;
+	}
+}

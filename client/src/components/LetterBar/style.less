@@ -1,0 +1,25 @@
+@import url('../../static/css/var.less');
+.letterBar{
+	position: fixed;
+	top:0;
+	right:0.3rem;
+	margin:auto;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	width: 0.8rem;
+	padding: 0.5rem 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 0.4rem;
+	overflow: hidden;
+	.letterItem{
+		color:@fontShallowColor;
+		width: 0.8rem;
+		text-align: center;
+		font-size: 0.6rem;
+		margin-bottom: 0.3rem;
+	}
+	.selected{
+		color:@mainColor;
+	}
+}

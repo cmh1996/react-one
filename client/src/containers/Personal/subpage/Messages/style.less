@@ -1,0 +1,51 @@
+@import url('../../../../static/css/var.less');
+.messagesPage{
+	padding-top: 4rem;
+	.SubHeader{
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.tagHeader{
+		top: 2rem;
+	}
+	.typeBox{
+		width: 100%;
+		height: 1.8rem;
+		padding: 0.4rem;
+		font-size: 0.6rem;
+		display: flex;
+		align-items:center;
+		span{
+			display: inline-block;
+			margin-right: 0.6rem;
+			background-color: white;
+			color:@fontDefaultColor;
+			padding: 0.3rem;
+			border-radius: 0.5rem;
+		}
+		.selected{
+			color:black;
+		}
+	}
+	.commentList{
+		.bigListItemMainInfo{
+			a{
+				color:#4aa9aa
+			}
+		}
+	}
+	.listItem{
+		.titleTips{
+			display: inline-block;
+			font-size: 0.6rem;
+			color:@fontDefaultColor;
+			margin-left: 0.4rem;
+		}
+		.value{
+			width: 3.1rem;
+			line-height: 0.8rem;
+			text-align: center;
+		}
+	}
+}

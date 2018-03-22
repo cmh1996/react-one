@@ -1,0 +1,109 @@
+@import url('../../../../static/css/var.less');
+.chat{
+	position: relative;
+	.SubHeader{
+		background: transparent;
+		border: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		.left i,.right i,.title{
+			color:white;
+		}
+	}
+	.chatContent{
+		width: 100%;
+		overflow-y: scroll;
+		position: absolute;
+		top: 2rem;
+		left: 0;
+		padding: 0.6rem;
+		.chatBox{
+			text-align: left;
+			margin-bottom: 0.6rem;
+			width: 100%;
+			display: flex;
+			flex-direction:column;
+			align-items:flex-start;
+			.chatTimeBox{
+				width: 100%;
+				height: 1.5rem;
+				line-height: 1rem;
+				text-align: center;
+				margin-top: 1rem;
+				.chatTime{
+					width: 3.6rem;
+					height: 1rem;
+					text-align: center;
+					line-height: 1rem;
+					display: inline-block;
+					color: @fontShallowColor;
+					background-color: rgba(0, 0, 0, 0.3);
+					font-size: 0.4rem;
+				}
+			}
+			.chatBoxBody{
+				display: flex;
+				flex-direction:row;
+				.chatter{
+					width: 2rem;
+					height: 2rem;
+					display: inline-block;
+					img{
+						width: 100%;
+						height: 100%;
+						border-radius: 50%;
+					}
+				}
+				.chatText{
+					max-width: 12rem;
+					background-color: rgba(0, 0, 0, 0.4);
+					padding: 0.4rem;
+					display: inline-block;
+					margin-left: 0.4rem;
+					word-break:break-all;
+					margin-top: 0.6rem;
+					border-radius: 0.8rem;
+					border-top-left-radius:0;
+					p{
+						font-size: 0.7rem;
+						line-height: 0.85rem;
+						letter-spacing: 0.05rem;
+						color:rgba(255, 255, 255, 0.9);
+					}
+				}	
+			}
+			&:first-child .chatTimeBox{
+				margin-top: 0;
+			}
+		}
+		.chatBoxSelf{
+			align-items:flex-end;
+			.chatBoxBody{
+				flex-direction:row-reverse;
+				.chatText{
+					border-top-right-radius:0;
+					border-top-left-radius:0.8rem;
+					background-color: rgba(255,255,255,0.9);
+					margin-right: 0.4rem;
+					p{
+						color:@fontDeepColor;
+					}
+				}
+			}
+		}
+	}
+	.sendBox{
+		background-color: rgba(255,255,255,0.3);
+		border: none;
+		input{
+			color: white;
+		}
+		button{
+			color:white;
+		}
+	}
+	::-webkit-scrollbar{width: 0.5rem;}
+	::-webkit-scrollbar-track{background-color:transparent;}
+	::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.2);}
+}

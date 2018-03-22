@@ -1,0 +1,74 @@
+@import url('../../static/css/var.less');
+.miniPopup{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	position: fixed;
+	top: 0; 
+	left: 0;
+	z-index: 100;
+	background-color: @popupBgColor;
+	transition:all 0.3s;
+	.miniPopupContent{
+		position: relative;
+		width: 13rem;
+		top: -4rem;
+		background-color: white;
+		font-size: 0.8rem;
+		padding: 0.8rem;
+		transition:all 0.3s;
+		.miniPopupHead{
+			width: 100%;
+			height: 1rem;
+			line-height: 1rem;
+			text-align: center;
+			.miniPopupTitle{
+				color:@fontDeepColor;
+			}
+			i{
+				float: right;
+			}
+		}
+		.miniPopupBody{
+			margin-top: 1rem;
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			p{
+				font-size: 0.7rem;
+				color:@fontDefaultColor;
+			}
+			.miniPopupBtnBox{
+				width: 100%;
+				display: flex;
+				justify-content:center;
+				align-items:center;
+				button:first-child{
+					margin-right:0.8rem;
+				}
+			}
+			.tips{
+				align-self:flex-end;
+				font-size: 0.7rem;
+				color:@fontDefaultColor;
+			}
+			textarea{
+				border:none;
+				width: 10rem;
+				font-size: 0.7rem;
+			}
+			button,input{
+				margin-top: 0.6rem;
+			}
+			input{
+				margin-bottom: 0.6rem;
+			}
+		}
+	}	
+}
+.before{
+	opacity:0;
+}
+.after{
+	opacity: 1;
+}

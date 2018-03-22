@@ -1,0 +1,38 @@
+@import url('../../../../../../static/css/var.less');
+.albumDetailPage{
+	.detailHeader{
+		.SubHeader{
+			background:transparent;
+		}
+	}
+	.tagHeader{
+		background-color: #174c60;
+		position: sticky;
+		.center{
+			span{
+				color:@fontShallowColor;
+				min-width: 3.5rem;
+			}
+			.selected{
+				color:@mainColor;
+				border-bottom:0.01rem solid @mainColor;
+			}
+		}
+	}
+	.songItem{
+		display: flex;
+		align-items:center;
+		.rankingNum{
+			width: 1.5rem;
+			text-align: center;
+			font-size: 0.8rem;
+			color:@fontShallowColor;
+		}
+		.selected{
+			color:#f2675e;
+		}
+		.listItem{
+			padding-left: 0;
+		}
+	}
+}

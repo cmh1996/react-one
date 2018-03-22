@@ -1,0 +1,48 @@
+.loading{   
+	width: 8rem;
+	height: 4rem;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-top: -2rem;
+	margin-left: -3rem;
+	background-color: rgba(255,255,255,0);
+	z-index: 10000;
+	svg{
+		.text{
+		    font-size: 1.1rem;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    fill: none;
+		    stroke-width: 1px;
+		    stroke-dasharray: 90 310;
+		    animation: stroke 6s infinite linear;
+		    letter-spacing: 0.1rem;
+		}
+		.text-1{
+		    stroke: #3498db;
+		    text-shadow: 0 0 0.4rem #3498db;
+		    animation-delay: -1.5s;
+		}
+		.text-2{
+		    stroke: #f39c12;
+		    text-shadow: 0 0 0.4rem #f39c12;
+		    animation-delay: -3s;
+		}
+		.text-3{
+		    stroke: #e74c3c;
+		    text-shadow: 0 0 0.4rem #e74c3c;
+		    animation-delay: -4.5s;
+		}
+		.text-4{
+		    stroke: #9b59b6;
+		    text-shadow: 0 0 0.4rem #9b59b6;
+		    animation-delay: -6s;
+		}
+	}
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}

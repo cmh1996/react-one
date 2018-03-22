@@ -1,0 +1,60 @@
+@import url('../../../../../../static/css/var.less');
+.searchResultPage{
+	padding-top: 2rem;
+	.searchBox{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2rem;
+		display: flex;
+		align-items:center;
+		.left{
+			width: 2rem;
+			color: white;
+			text-align: center;
+			i{
+				font-size: 1.2rem;
+			}
+		}
+		input{
+			flex:1;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color:white;
+			font-size: 0.7rem;
+			padding-left: 0.3rem;
+			padding: 0.3rem;
+			margin-right: 0.3rem;
+			&::-webkit-input-placeholder{
+				color:@fontShallowColor;
+			}
+		}
+		.right{
+			width: 2rem;
+			text-align: center;
+			color: white;
+			i{
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.tagHeader{
+		top: 2rem;
+	}
+	.listBox{
+		margin-top: 2rem;
+		width: 100%;
+		overflow-y: scroll;
+		.content{
+			background-color: transparent;
+		}
+		.noresult{
+			font-size: 0.7rem;
+			width: 100%;
+			text-align: center;
+			margin-top: 4rem;
+		}
+	}
+}

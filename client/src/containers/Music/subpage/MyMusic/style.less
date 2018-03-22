@@ -1,0 +1,33 @@
+@import url('../../../../static/css/var.less');
+.MyMusicPage{
+	width: 100%;
+	.mySongList{
+		background-color: rgba(255, 255, 255, 0.05);
+		padding-top: 2rem;
+		.tagHeader{
+			position: fixed;
+			top: 2rem;
+			left: 0;
+			z-index: 0;
+			span{
+				color:@fontShallowColor;
+				border: none;
+			}
+			.selected{
+				color:white;
+			}
+		}
+		.songlistContentBox{
+			.listItem{
+				height: 3.6rem;
+				.listItemLeft{
+					.listItemImg{
+						width: 2.4rem;
+						height: 70%;
+						margin-right: 0.3rem;
+					}
+				}
+			}
+		}
+	}
+}

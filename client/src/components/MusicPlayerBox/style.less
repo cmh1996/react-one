@@ -1,0 +1,51 @@
+@import url('../../static/css/var.less');
+.muaicPlayerBox{
+	position: fixed;
+	bottom: 3rem;
+	left: 0.6rem;
+	width: 2.6rem;
+	height: 2.6rem;
+	display: block;
+	opacity: 0.8;
+	text-align: center;
+	z-index: 10000;
+	svg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		circle{
+	      stroke-width: 0.3rem;
+	      transform-origin: center;
+		}
+		.progress-background{
+		    transform: scale(0.9);
+		    stroke: rgba(0,0,0,0.2);
+		}
+		.progress-bar{
+		    transform: scale(0.9) rotate(-90deg);
+		    stroke: @thirdColor;
+		}
+	}
+	img{
+		width: 85%;
+		height: 85%;
+		position: relative;
+		top: 0.2rem;
+		border-radius: 50%;
+	}
+	.noSongImg{
+		width: 90%;
+		height: 90%;
+		text-align: center;
+		background-color: white;
+		display: block;
+		line-height: 2.6rem;
+		border-radius: 50%;
+		i{
+			position: relative;
+			left: 0.1rem;
+			top: 0.05rem;
+			font-size: 1.5rem;
+		}
+	}
+}

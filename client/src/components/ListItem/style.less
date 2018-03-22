@@ -1,0 +1,73 @@
+@import url('../../static/css/var.less');
+.listItem{
+	width:100%;
+	height: 2.8rem;
+	display: flex;
+	flex-wrap:nowrap;
+	padding-left:0.8rem;
+	padding-right:0.8rem;
+	font-size: 0.7rem;
+	justify-content:space-between;
+	align-items:center;
+	border-bottom:1px solid @borderColor;
+	background: @subHeaderBgColor;
+	.listItemLeft{
+		height: 100%;
+		display: flex;
+		align-items:center;
+		overflow: hidden;
+		.listItemImg{
+			width: 1.6rem;
+			height: 1.6rem;
+			display: inline-block;
+			border-radius: 50%;
+		}
+		.listItemContent{
+			margin-left: 0.3rem;
+			display: flex;
+			flex-direction:column;
+			height: 100%;
+			flex:1;
+			justify-content:space-around;
+			word-break:break-all;
+			.title{
+				width: 100%;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+			.info{
+				font-size: 0.6rem;
+				color:@fontDefaultColor;
+				max-width: 9rem;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}	
+		}
+	}
+	.value{
+		font-size: 0.55rem;
+		color:@fontDefaultColor;
+		i{
+			font-size: 0.6rem;
+			margin-left: 0.2rem;
+		}
+	}
+	.optionsBox{
+		.option{
+			height: 1rem;
+			line-height: 1rem;
+			background-color: white;
+			color:@seventhColor;
+			border:1px solid @seventhColor;
+			display: inline-block;
+			padding-left: 0.7rem;
+			padding-right: 0.7rem;
+		}
+		.selected{
+			background-color: @seventhColor;
+			color:white;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@import url('../../static/css/var.less');
+.bigSelectBox{
+	width: 100%;
+	li{
+		width: 30%;
+		height: 1.8rem;
+		display: inline-block;
+		text-align: center;
+		line-height: 1.8rem;
+		font-size: 0.7rem;
+		background-color:rgba(255, 255, 255, 0.1);
+		margin-bottom: 0.5rem;
+		margin-left: 0.4rem;
+		border-radius: 0.2rem;
+		overflow:hidden;
+		&:first-child{
+			height:4.1rem;
+			line-height: 4.1rem;
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+	.selected{
+		color:@mainColor;
+	}
+}

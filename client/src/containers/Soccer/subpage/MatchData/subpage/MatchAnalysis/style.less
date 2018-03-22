@@ -1,0 +1,115 @@
+@import url('../../../../../../static/css/var.less');
+.matchAnalysis{
+	width: 100%;
+	display:flex;
+	flex-direction:column;
+	.SmallTitleBar{
+		background-color: #e8e8e8;
+	}
+	.battleHistory{
+		.battle{
+			width: 100%;
+			padding: 0.4rem;
+			background-color: #f7f7f7;
+			display: flex;
+			flex-direction:column;
+			font-size: 0.6rem;
+			.battleCount{
+				width: 100%;
+				height: 1.4rem;
+				display: flex;
+				justify-content:space-between;
+				align-items:center;
+			}
+			.battleBar{
+				width: 100%;
+				height: 1.6rem;
+				color:white;
+				display: flex;
+				.aWinBar{
+					background-color: #ea2726;
+					text-align: left;
+					line-height: 1.6rem;
+					height: 100%;
+					padding: 0 0.2rem;
+				}
+				.drawBar{
+					background-color: #49c867;
+					text-align: center;
+					line-height: 1.6rem;
+					height: 100%;
+					padding: 0 0.2rem;
+				}
+				.bWinBar{
+					background-color: #1d9ff9;
+					text-align: right;
+					line-height: 1.6rem;
+					height: 100%;
+					padding: 0 0.2rem;
+				}
+			}
+		}
+	}
+	.teamRankingList{
+		background-color: #f7f7f7;
+		.teamRankingData{
+			width: 100%;
+			font-size: 0.6rem;
+			tr{
+				border-top: 1px solid @borderColor;
+				height: 1.6rem;
+				line-height: 1.6rem;
+				color:@fontDefaultColor;
+				td{
+					text-align: center;
+				}
+			}
+		}
+	}
+	.recentRecord{
+		width: 100%;
+		font-size: 0.6rem;
+		background-color: #f7f7f7;
+		.battleMatches{
+			margin-top: 0;
+		}
+	}
+	.teamName{
+		width: 100%;
+		padding: 0.6rem;
+		background-color: #f2f2f2;
+		img{
+			width: 1rem;
+			height: 1rem;
+			display: inline-block;
+			margin-right: 0.6rem;
+			position: relative;
+			top: 0.1rem;
+		}
+		span{
+			color:@fontDeepColor;
+			font-size: 0.6rem;
+		}
+	}
+	.battleMatches{
+		width: 100%;
+		margin-top: 1rem;
+		tr{
+			border-top: 1px solid @borderColor;
+			height: 1.6rem;
+			line-height: 1.6rem;
+			color:@fontDefaultColor;
+		}
+		.battleMatch{
+			td{
+				text-align: center;
+				color:@fontDeepColor;
+			}
+			.battleScore{
+				color:white;
+				border-top: 0.2rem solid #f7f7f7;
+				border-bottom: 0.2rem solid #f7f7f7;
+			}
+		}
+	}
+}

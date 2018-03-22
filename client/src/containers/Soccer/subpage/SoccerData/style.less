@@ -1,0 +1,118 @@
+@import url('../../../../static/css/var.less');
+.soccerDataPage{
+	padding-top: 6rem;
+	padding-bottom: 2.4rem;
+	position: relative;
+	z-index: 0;
+	.tagHeader{
+		top: 2rem;
+	}
+	.rankSelectBox{
+		width: 100%;
+		height: 2rem;
+		position:fixed;
+		top: 4rem;
+		left: 0;
+		display: flex;
+		padding: 0.3rem;
+		align-items:center;
+		background-color: #f8f8f8;
+		z-index: 10;
+		li{
+			flex:1;
+			height: 1.3rem;
+			line-height: 1.3rem;
+			border: 1px solid @borderColor;
+			text-align: center;
+			font-size: 0.6rem;
+			color:@fontDefaultColor;
+			background: white;
+		}
+		.selected{
+			background-color: @thirdColor;
+			color:white;
+			border-color: @thirdColor;
+		}
+	}
+	.schedulePage{
+		.selectStage{
+			width: 100%;
+			height: 1.6rem;
+			display: flex;
+			align-items:center;
+			justify-content:space-between;
+			padding: 0 0.7rem;
+			font-size: 0.6rem;
+			color:@forthColor;
+		}
+	}
+	.dataDetail{
+		width: 100%;
+		font-size: 0.6rem;
+		color:black;
+		background-color: #f6f6f6;
+		overflow: hidden;
+		thead{
+			width: 100%;
+			height: 1.6rem;
+			tr{
+				width: 100%;
+				height: 100%;
+				line-height: 1.6rem;
+				th{
+					text-align: center;
+					font-weight: lighter;
+				}
+				.alignLeft{
+					text-align: left;
+					padding-left: 0.5rem;
+				}
+				.alignRight{
+					text-align: right;
+					padding-right: 0.5rem;
+				}
+			}
+			.groupsTitle{
+				color: @thirdColor;
+				td{
+					padding-left: 0.4rem;
+				}
+			}
+		}
+		tbody{
+			width: 100%;
+			background: white;
+			tr{
+				height: 2rem;
+				line-height: 2rem;
+				border:1px solid @borderColor;
+				td{
+					height: 100%;
+					text-align: center;
+					line-height: 2rem;
+					overflow: hidden;
+					img{
+						width: 1rem;
+						height: 1rem;
+						position: relative;
+						top: 0.2rem;
+					}
+				}
+				.alignLeft{
+					text-align: left;
+					padding-left: 0.5rem;
+					img{
+						margin-right: 0.3rem;
+					}
+				}
+				.alignRight{
+					text-align: right;
+					padding-right: 0.5rem;
+					img{
+						margin-left: 0.3rem;
+					}
+				}
+			}
+		}
+	}
+}

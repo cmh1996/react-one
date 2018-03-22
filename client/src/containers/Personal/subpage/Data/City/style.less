@@ -1,0 +1,44 @@
+@import url('../../../../../static/css/var.less');
+.cityPage{
+	display: flex;
+	flex-direction:column;
+	background-color: @headerBgColor;
+	.gpsCity{
+		width: 100%;
+		height: 3rem;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		span{
+			font-size: 0.6rem;
+			color: @fontDefaultColor;
+		}
+	}
+	.hotCity,.provinces{
+		width:100%;
+		padding: 0.5rem;
+		display: flex;
+		flex-wrap:wrap;
+		span{
+			width: 3.5rem;
+			height: 1.6rem;
+			border:1px solid @borderColor;
+			font-size: 0.7rem;
+			margin-right: 0.3rem;
+			text-align: center;
+			line-height: 1.6rem;
+			margin-bottom: 0.3rem;
+			overflow: hidden;
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+		}
+	}
+	.wholeCity{
+		p{
+			font-size: 0.8rem;
+			margin: 0.5rem; 
+			margin-bottom: 0;
+		}
+	}
+}

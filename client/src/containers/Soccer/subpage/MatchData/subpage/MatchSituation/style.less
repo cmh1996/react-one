@@ -1,0 +1,251 @@
+@import url('../../../../../../static/css/var.less');
+.matchSituation{
+	width: 100%;
+	display:flex;
+	flex-direction:column;
+	.SmallTitleBar{
+		background-color: #e8e8e8;
+	}
+	.teamInfo{
+		width: 100%;
+		height: 1.6rem;
+		position: relative;
+		background-color: #f2f2f2;
+		div{
+			font-size: 0.55rem;
+			color:@fontDeepColor;
+			height: 1.6rem;
+			line-height: 1.6rem;
+			img{
+				width: 1rem;
+				height: 1rem;
+				display: inline-block;
+				position: relative;
+				top: 0.3rem;
+				margin: 0 0.4rem;
+			}
+		}
+		div:first-child{
+			position: absolute;
+			right: 50%;
+		}
+		div:last-child{
+			position: absolute;
+			left: 50%;
+		}
+	}
+	.matchEvent{
+		.eventList{
+			width: 100%;
+			display: flex;
+			flex-direction:column;
+			background-color: #f7f7f7;
+			font-size: 0.6rem;
+			text-align: center;
+			padding:0.5rem;
+			position: relative;
+			.topIcon{
+				color:@thirdColor;
+				font-size: 1rem;
+				margin-bottom: 2rem;
+			}
+			.bottomIcon{
+				color:@thirdColor;
+				font-size: 1rem;
+				margin-top: 2rem;
+			}
+			.midLine{
+				width: 0.1rem;
+				background: @thirdColor;
+				display: inline-block;
+				position: absolute;
+				top: 1.5rem;
+				left: 50%;
+				margin-left: -0.05rem;
+			}
+			.midLine:before{
+				content:'';
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 50%;
+				background: @thirdColor;
+				position: absolute;
+				top: 0;
+				left: -0.2rem;
+			}
+			.midLine:after{
+				content:'';
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 50%;
+				background: @thirdColor;
+				position: absolute;
+				bottom: 0;
+				left: -0.2rem;
+			}
+			.event{
+				width: 100%;
+				margin-bottom: 1.4rem;
+				position: relative;
+				.eventTime{
+					width: 1rem;
+					height: 1rem;
+					line-height: 1rem;
+					text-align: center;
+					background-color: @thirdColor;
+					display: inline-block;
+					color:white;
+					border-radius: 50%;
+					position: absolute;
+					left:50%;
+					margin-left: -0.5rem;
+				}
+				.teamAContent,.teamBContent{
+					width:6.5rem;
+					background: white;
+					border: 1px solid @borderColor;
+					padding: 0 0.1rem;
+					padding-bottom: 0.2rem;
+					display: flex;
+					flex-direction:column;
+					justify-content:space-around;
+					align-items:flex-end;
+					left: 0.5rem;
+					float: left;
+					.eventItem{
+						padding: 0.2rem 0;
+						height: 1.2rem;
+						line-height: 1.2rem;
+					}
+					img{
+						width: 0.8rem;
+						height: 0.8rem;
+						display: inline-block;
+						margin: 0 0.2rem;
+						position: relative;
+						top: 0.15rem;
+					}
+				}
+				.teamBContent{
+					float: right;
+					align-items:flex-start;
+					left: auto;
+					right:0.5rem;
+				}
+				.teamBContent:before,.teamBContent:after{
+					border: solid transparent;
+				    content: '';
+				    height: 0;
+				    right: 43%;
+				    position: absolute;
+				    width: 0;
+				}
+				.teamBContent:after{
+					border-width: 0.25rem;
+				    border-right-color: white;
+				    top: 0.185rem;
+				}
+				.teamBContent:before{
+					border-width: 0.3rem;
+				    border-right-color: @borderColor;
+				    top: 0.14rem;
+				}
+				.teamAContent:before,.teamAContent:after{
+					border: solid transparent;
+				    content: '';
+				    width: 0;
+				    height: 0;
+				    left: 43%;
+				    position: absolute;
+				}
+				.teamAContent:after{
+					border-width: 0.25rem;
+				    border-left-color: white;
+				    top: 0.185rem;
+				}
+				.teamAContent:before{
+					border-width: 0.3rem;
+				    border-left-color: @borderColor;
+				    top: 0.14rem;
+				}
+			}
+		}
+	}
+	.figureNode{
+		width: 100%;
+		height: 1.5rem;
+		background-color: #f2f2f2;
+		font-size: 0.5rem;
+		display: flex;
+		justify-content:space-around;
+		align-items:center;
+		color:@fontDefaultColor;
+		li{
+			img{
+				width: 0.6rem;
+				height: 0.6rem;
+				display: inline-block;
+				position: relative;
+				top: 0.15rem;
+				margin-right: 0.2rem;
+			}
+		}
+	}
+	.statistics{
+		.statisticsInfo{
+			width: 100%;
+			background-color: #f2f2f2;
+			padding: 0.4rem;
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			padding-bottom: 1rem;
+			li{
+				width: 100%;
+				height: 0.6rem;
+				display: flex;
+				justify-content:space-between;
+				margin-top: 1rem;
+				span{
+					width: 1rem;
+					font-size: 0.6rem;
+					color:@fontDefaultColor;
+				}
+				.midText{
+					width: 3rem;
+					text-align: center;
+				}
+				.BVal{
+					text-align: right;
+				}
+				.slot{
+					width: 5rem;
+					height: 0.7rem;
+					background-color: #e9e9e9;
+					position: relative;
+					.slotContent{
+						position: absolute;
+						top: 0;
+						height: 100%;
+						background-color: @thirdColor;
+					}
+					.slotA{
+						right: 0;
+					}
+					.slotB{
+						left:0;
+					}
+					.win{
+						background-color:@thirdColor;
+					}
+					.lose{
+						background-color:#888888;
+					}
+				}
+				&:first-child{
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,205 @@
+@import url('../../../../static/css/var.less');
+.timetable{
+	width: 100%;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	padding-top: 1rem;
+	.SubHeader{
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: transparent;
+		border: none;
+		.left,.title,.right{
+			color: white;
+			i{
+				color:white;
+			}
+		}
+	}
+	.personalInfo{
+		width: 100%;
+		height: 6rem;
+		margin-top: 2rem;
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		span{
+			font-size: 0.8rem;
+			color:rgba(255, 255, 255, 0.8);
+		}
+		img{
+			width: 3rem;
+			height: 3rem;
+			display: block;
+			border-radius: 50%;
+			margin-top: 0.6rem;
+		}
+	}
+	.send{
+		margin-top: 1rem;
+		width: 100%;
+		height: 2.4rem;
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+		padding: 0 0.8rem;
+		.sendTips{
+			height: 100%;
+			display: flex;
+			flex-direction:column;
+			justify-content:space-between;
+			flex:1;
+			.sendTipsTitle{
+				font-size: 1rem;
+				color:white;
+			}
+			.sendTipsTime{
+				font-size: 0.6rem;
+				color:@fontShallowColor;
+				margin-top: 0.4rem;
+				margin-left: 0.6rem;
+			}
+			.note{
+				font-size: 0.6rem;
+				color:white;
+				margin-top: 0.4rem;
+				span{
+					display: inline-block;
+					width: 0.5rem;
+					height: 0.5rem;
+					border-radius: 50%;
+					margin-right: 0.2rem;
+				}
+				.normal{
+					background-color: @mainColor;
+				}
+				.expired{
+					margin-left: 0.5rem;
+					background-color: #f0686e;
+				}
+			}
+		}
+		.sendBtn{
+			width: 2rem;
+			height: 2rem;
+			display: inline-block;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 1.85rem;
+			color: white;
+			background: @thirdColor;
+			font-size: 1.4rem;
+			transition:all 0.3s;
+		}
+	}
+	.tasksList{
+		display: flex;
+		flex-direction:column;
+		width: 100%;
+		margin-top: 1rem;
+		padding: 0 0.8rem;
+		.normal:before{
+			content:'';
+			position: absolute;
+			left:-0.3rem;
+			top: -0.05rem;
+			width:0.6rem;
+			height: 0.6rem;
+			background: @mainColor;
+			border-radius: 50%;
+		}
+		.expired:before{
+			content:'';
+			position: absolute;
+			left:-0.3rem;
+			top: -0.05rem;
+			width:0.6rem;
+			height: 0.6rem;
+			background: #f0686e;
+			border-radius: 50%;
+		}
+		.task{
+			width: 100%;
+			border-left: 1px dotted white;
+			padding-left: 1rem;
+			padding-bottom: 1rem;
+			display: flex;
+			justify-content:space-between;
+			position: relative;
+			color:white;
+			.taskLeft{
+				flex:1;
+				span{
+					font-size: 0.8rem;
+				}
+				p{
+					margin-top: 0.6rem;
+					margin-bottom: 0.6rem;
+					font-size: 0.6rem;
+					color:@fontShallowColor;
+					word-break:break-all; 
+					line-height: 1rem;
+				}
+				.taskBtn{
+					width: 100%;
+					height:1rem;
+					button{
+						width: 2.4rem;
+						height: 1.2rem;
+						background-color: transparent;
+						color: @fontShallowColor;
+						border: 1px solid @fontShallowColor;
+						border-radius: 0.5rem;
+						display: inline-block;
+						margin-right:0.4rem;
+						font-size: 0.55rem;
+					}
+				}
+			}
+			.taskTime{
+				display: flex;
+				flex-direction:column;
+				font-size: 0.6rem;
+				align-items:center;
+				.taskYmd{
+					text-align: center;
+					line-height: 0.8rem;
+				}
+			}
+		}
+	}
+	.popup{
+		.content{
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			font-size: 0.6rem;
+			input,textarea{
+				width: 12rem;
+				background: transparent;
+				font-size: 0.6rem;
+				color: white;
+				border: none;
+				border-bottom: 2px solid white;
+				padding: 0.3rem;
+				border: none;
+				border-bottom: 1px solid white;
+			}
+			textarea{
+				margin-top: 1rem;
+			}
+			.newTaskTime{
+				margin-top: 1rem;
+				input{
+					width: 1.5rem;
+					text-align: center;
+				}
+			}
+			::-webkit-input-placeholder{
+				color:@fontShallowColor;
+			}
+		}
+	}
+}
